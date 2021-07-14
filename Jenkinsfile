@@ -29,12 +29,14 @@ pipeline {
                 } 
          }
 	 stage("build & SonarQube analysis") {
-          node {
+          steps {
+	    script{
               withSonarQubeEnv(credentialsId: 'sonarqubetoken') {
-                 sh 'mvn clean package sonar:sonar'
+              sh 'mvn clean package sonar:sonar'
               }    
-           }
-	 }
+            }
+	  }
+	}
          stage("Quality Gate"){
            timeout(time: 1, unit: 'HOURS') {
               def qg = waitForQualityGate()
