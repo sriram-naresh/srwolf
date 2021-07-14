@@ -24,7 +24,7 @@ pipeline {
 		        nexusUrl: '172.31.69.136:8081', 
 		        nexusVersion: 'nexus3', 
 	                protocol: 'http', 
-		        repository: 'http://3.238.239.227:8081/repository/vprofile-release/', 
+		        repository: 'vprofile-release', 
 		        version: 'v1'
                 } 
          } 
