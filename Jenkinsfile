@@ -28,4 +28,6 @@ pipeline {
 	              protocol: 'http', 
 		      repository: 'http://3.238.239.227:8081/repository/vprofile-release/', 
 		      version: 'v1'
-			
+	       }
+	   }
+	}
